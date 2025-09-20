@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "generated_at": {
+              "type": "string"
+            },
+            "forecast": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "point_time": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "meta": {
+        "type": "object",
+        "properties": {
+          "data_point_period_seconds": {
+            "type": "integer"
+          },
+          "region": {
+            "type": "string"
+          },
+          "signal_type": {
+            "type": "string"
+          },
+          "units": {
+            "type": "string"
+          },
+          "warnings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "model": {
+            "type": "object",
+            "properties": {
+              "date": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              }
+            }
+          },
+          "generated_at_period_seconds": {
+            "type": "integer"
+          }
+        }
+      }
+    }
+  }
+}
+
